@@ -72,8 +72,12 @@ router.post('/edit-product/:id', (req, res) => {
   })
 })
 
+router.get('/admin-signup',(req,res) =>
+{
+  res.render('admin/admin-signup');
+})
 
-router.post('/admin-signup', (req, res) => {
+router.post('/admin/admin-signup', (req, res) => {
   productHelpers.adminSignup(req.body).then((response) => {
     console.log(response);
   })
