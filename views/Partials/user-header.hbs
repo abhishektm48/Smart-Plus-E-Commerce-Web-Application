@@ -48,3 +48,50 @@
     </nav>
 </header>
 
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container-fluid">
+          <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="/" class="logo">
+                  <h4>Smart<span>Plus</span></h4>
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                  <li class="scroll-to-section"><a href="/" class="active">Products<span class="sr-only">(current)</span></a></li>
+                  <li class="scroll-to-section"><a href="/cart">Cart<span class="badge badge-success"
+                                id="cart-count">{{cartCount}}</span></a></li>
+                   {{#if user}}             
+                  <li class="scroll-to-section"><a href="#">Orders</a></li>
+                  {{/if}}
+                </ul>        
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">
+                  {{#if user}}
+                  {{user.username}}
+                  {{else}}
+                  Account
+                  {{/if}}
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    {{#if user}}
+                    <a href="logout">Logout</a>
+                    {{else}}
+                    <a href="login">Login</a>
+                    {{/if}}
+                  </div>
+                </div>
+                <!-- ***** Menu End ***** -->
+              </nav>
+            </div>
+          </div>
+        </div>
+        </div>
+      </header>
+
+      
+    
+

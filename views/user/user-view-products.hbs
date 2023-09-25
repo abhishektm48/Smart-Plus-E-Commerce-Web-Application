@@ -1,23 +1,57 @@
-<section>
+{{!-- <section>
   <div class="container mt-5">
     <div class="row">
       {{#each products}}
       <div class="col-md-3 p-3">
         <div class="card" style="width: 15rem; height:24rem; border:4px solid rgb(74, 206, 155); border-radius:10px;">
-          <img class="card-img-top"
-           style="height:11rem; width:10rem;"
-            src="/product-images/{{this._id}}.jpg"
-             alt="Card image cap">
+          <img class="card-img-top" style="height:11rem; width:10rem;" src="/product-images/{{this._id}}.jpg"
+            alt="Card image cap">
           <div class="card-body bg-info">
             <h5 class="card-title">{{this.pname}}</h5>
             <p class="card-text">Rs.{{this.price}}</p>
             <p class="card-text">{{this.des}}</p>
-           <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add To Cart</button>
+            <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add To Cart</button>
           </div>
         </div>
       </div>
       {{/each}}
     </div>
   </div>
-</section>
+</section> --}}
 
+
+{{!-- Banner Starts Here --}}
+    
+      <banner>
+      <div class="banner">
+        <div class="slider">
+          <img src="./images/img2.jpg" alt="banner_image" id="slide-img" class="img-fluid">
+        </div>
+      </div>
+    </banner>
+
+<section>
+<main>
+  <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+      {{#each products}}
+      <div class="col mt-4">
+        <div class="card h-100 shadow-sm">
+          <img src="/product-images/{{this._id}}.jpg" alt= "Card image cap" class="card-img-top" alt="product_image">
+          <div class="card-body">
+            <div class="clearfix mb-3">
+              <span class="float-start badge rounded-pill bg-primary">{{this.pname}}</span>
+              <span class="float-end price-hp">Rs.{{this.price}}</span>
+            </div>
+            <h5 class="card-title">{{this.des}}</h5>
+            <div class="text-center my-4">
+              <button onclick="addToCart('{{this._id}}')" class="btn btn-warning">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</main>
+</section>

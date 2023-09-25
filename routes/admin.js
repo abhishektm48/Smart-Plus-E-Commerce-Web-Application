@@ -85,7 +85,8 @@ router.post('/admin/admin-signup', (req, res) => {
 
 router.post('/admin-login', (req, res) => {
   productHelpers.adminLogin(req.body).then((response) => {
-    if (response.status) {
+    if (response.status)
+    {
       req.session.admin = response.admin
       req.session.admin.loggedIn = true
       productHelpers.getAllProduct().then((products) => {

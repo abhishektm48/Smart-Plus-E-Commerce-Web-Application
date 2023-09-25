@@ -11,13 +11,16 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
 
-    <title>Shopping Cart</title>
+    <title>Smart Plus</title>
 </head>
 
 <body>
@@ -27,6 +30,18 @@
     {{>user-header}}
     {{/if}}
     {{{body}}}
+    <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
     {{>user-footer}}
 
     <!-- Optional JavaScript -->
