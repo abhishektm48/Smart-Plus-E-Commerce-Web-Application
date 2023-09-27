@@ -36,7 +36,8 @@ figure, header, nav, section, article, aside, footer, figcaption {
 /* Header starts here */
 
 .header-area{
-  background-color: #e4e721;
+  background-color: #e21044;
+  background: linear-gradient(105deg, rgba(255,77,30,1) 0%, rgba(255,44,109,1) 100%);
 }
 
 .main-nav{
@@ -44,27 +45,54 @@ figure, header, nav, section, article, aside, footer, figcaption {
   justify-content: space-between;
   padding: 20px;
 }
-
-.logo{
+.main-nav a{
   text-decoration: none;
-  color: rgb(165, 25, 111);
+}
+
+.logo h4{
+  text-decoration: none;
+  font-family: Croissant One;
+  color: #d4d1d1;
+}
+
+.logo h4:hover{
+  color: #fff;
+  animation: 0.3s ease-in-out;
 }
 
 .nav a{
   padding-left: 20px;
   text-decoration: none;
   color: #fff;
-  font-family: roboto;
+  font-family: Rubik;
+}
+
+.nav a:hover{
+  background-color: linear-gradient(105deg, rgba(255,44,109,1) 0%, rgba(255,77,30,1) 100%);
+}
+
+/* Footer css starts here */
+
+.footerr{
+  background-color: #e21044;
+  background: linear-gradient(105deg, rgba(255,77,30,1) 0%, rgba(255,44,109,1) 100%);
+}
+
+.footerr h6{
+  padding: 30px;
+  color: #d4d1d1;
+  font-family: Croissant One;
 }
 
 /* dropdown css */
 
 .dropbtn {
   background-color: #3498DB;
+  background: linear-gradient(105deg, rgb(15, 8, 116) 0%, rgb(8, 57, 97) 100%);
   color: white;
-  padding: 6px 8px;
+  padding: 8px 10px;
   font-size: 14px;
-  font-family: roboto;
+  font-family: Rubik;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -72,6 +100,8 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 .dropbtn:hover, .dropbtn:focus {
   background-color: #2980B9;
+  background: linear-gradient(105deg, rgb(8, 57, 97) 0%,  rgb(15, 8, 116) 100%);
+  animation: 0.4s ease-in-out;
 }
 
 .dropdown {
@@ -108,6 +138,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  background-image: url('/public/images/');
 }
 
 .slider{

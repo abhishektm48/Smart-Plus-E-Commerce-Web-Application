@@ -106,4 +106,13 @@ router.get('/admin-logout', (req, res) => {
   res.redirect('/admin')
 })
 
+router.get('/all-users',(req, res) =>
+{
+  productHelpers.getAllUsers().then((userData) =>
+  {
+    res.render('admin/all-users',{userData,admin:true})
+  })
+  
+})
+
 module.exports = router;

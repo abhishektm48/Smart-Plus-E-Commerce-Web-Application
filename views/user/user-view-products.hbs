@@ -25,7 +25,7 @@
       <banner>
       <div class="banner">
         <div class="slider">
-          <img src="./images/img2.jpg" alt="banner_image" id="slide-img" class="img-fluid">
+          <img src="" alt="banner_image" id="slide-img" class="img-fluid banner-imgs">
         </div>
       </div>
     </banner>
@@ -40,10 +40,10 @@
           <img src="/product-images/{{this._id}}.jpg" alt= "Card image cap" class="card-img-top" alt="product_image">
           <div class="card-body">
             <div class="clearfix mb-3">
-              <span class="float-start badge rounded-pill bg-primary">{{this.pname}}</span>
-              <span class="float-end price-hp">Rs.{{this.price}}</span>
+              <span class="float-start badge rounded-pill wow bounceInUp data-wow-duration="2s" data-wow-delay="5s"" style="background: linear-gradient(105deg, rgba(255,77,30,1) 0%, rgba(255,44,109,1) 100%);;">{{this.pname}}</span>
+              <span class="float-end price-hp pl-2 wow bounceInUp data-wow-duration="2s" data-wow-delay="5s"">Rs.{{this.price}}</span>
             </div>
-            <h5 class="card-title">{{this.des}}</h5>
+            <h5 class="card-title wow bounceInUp data-wow-duration="2s" data-wow-delay="5s"">{{this.des}}</h5>
             <div class="text-center my-4">
               <button onclick="addToCart('{{this._id}}')" class="btn btn-warning">Add To Cart</button>
             </div>

@@ -1,8 +1,8 @@
 //const { log } = require('debug/src/browser');
 var db=require('../config/connection')
-let collection=require('../config/collection')
-const bcrypt=require('bcrypt')
-let objectId=require('mongodb').ObjectID
+let collection = require('../config/collection')
+const bcrypt = require('bcrypt')
+let objectId = require('mongodb').ObjectID
 const Razorpay = require('razorpay');
 
 var instance = new Razorpay({
@@ -274,6 +274,7 @@ module.exports={
                 products:products,
                 totalAmount:total,
                 status:status,
+                // admin_Id: objectId('65031d61222eb927287b4db7'),
                 date:new Date()
             }
 
@@ -298,6 +299,7 @@ module.exports={
 
     getUserOrders:(userId)=>
     {
+        console.log(`userId is...${userId}`);
         return new Promise(async(resolve,reject)=>
         {
             let orders=await db.get().collection(collection.ORDER_DETAILS).find({userId:objectId(userId)}).toArray()

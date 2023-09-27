@@ -18,6 +18,7 @@
     "mongodb": "^3.6.2",
     "morgan": "~1.9.1",
     "nodemon": "^3.0.1",
-    "razorpay": "^0.0.0"
+    "razorpay": "^0.0.0",
+    "wow.js": "^1.2.2"
   }
 }

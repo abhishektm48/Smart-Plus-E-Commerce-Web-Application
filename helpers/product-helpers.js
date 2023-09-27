@@ -2,7 +2,8 @@ const { log } = require('debug/src/browser');
 var db=require('../config/connection')
 let collection=require('../config/collection')
 let objectId=require('mongodb').ObjectID
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcrypt');
+const Collection = require('mongodb/lib/collection');
 
 module.exports={
     addProduct:(product,callback)=>
@@ -108,5 +109,18 @@ module.exports={
                 resolve({status:false})
             }
         })
+    },
+
+    getAllUsers: () =>
+    {
+        return new Promise(async(resolve,reject) =>
+        {
+            await db.get().collection(collection.USER_DETAILS).find().toArray().then((response) =>
+            {
+                resolve(response);
+            })
+            
+        })
+        
     }
 }
