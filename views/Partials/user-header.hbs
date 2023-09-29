@@ -16,8 +16,7 @@
                   <li class="scroll-to-section"><a href="/cart">Cart<span class="badge badge-success"
                                 id="cart-count">{{cartCount}}</span></a></li>
                   {{else}}
-                     
-                    <li class="scroll-to-section"><a href="#">Cart</a></li>
+                    <li class="scroll-to-section"><a href="#" onclick="showAlert()">Cart</a></li>
                     {{/if}}
 
                    {{#if user}}             
@@ -48,6 +47,11 @@
         </div>
       </header>
 
-      
+      <script>
+        function showAlert()
+        {
+          alert('Please login to check the cart list...')
+        }
+      </script>
     
 

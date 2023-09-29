@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(105deg,rgb(255, 37, 128) 0%,rgb(255, 30, 49) 100%);">
         <div class="container">
             <a class="navbar-brand" href="/view-products">Admin Panel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -9,15 +9,29 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    {{#if admin}}
                     <li class="nav-item active">
                         <a class="nav-link" href="/admin/products">All Products <span class="sr-only">(current)</span></a>
                     </li>
+                    {{else}}
+                    <a class="nav-link" href="#" onclick="showAdmin()">All Products <span class="sr-only">(current)</span></a>
+                    {{/if}}
+
+                    {{#if admin}}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">All Orders</a>
+                        <a class="nav-link" href="all-orders">All Orders</a>
                     </li>
+                    {{else}}
+                        <a class="nav-link" href="#" onclick="showAdmin()">All Orders</a>
+                    {{/if}}
+
+                    {{#if admin}}
                     <li class="nav-item">
                         <a class="nav-link" href="all-users">All Users</a>
                     </li>
+                    {{else}}
+                        <a class="nav-link" href="#" onclick="showAdmin()">All Users</a>
+                    {{/if}}
                     
                     
                 </ul>
@@ -43,3 +57,10 @@
         </div>
     </nav>
 </header>
+
+<script>
+    function showAdmin()
+    {
+        alert('STRICTLY ALLOWED FOR ADMIN ONLY..!! IF YOU ARE A ADMIN KINDLY LOGIN TO ACCESS THE CONTROLS..')
+    }
+</script>

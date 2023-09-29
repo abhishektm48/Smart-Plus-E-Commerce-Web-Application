@@ -1,0 +1,43 @@
+<section>
+    <div class="container">
+        <table class="table mt-4">
+  <thead>
+    <tr>
+    <th scope="col">No</th>
+      <th scope="col">User</th>
+      <th scope="col">Product</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Status</th>
+      <th scope="col">Payment Method</th>
+      <th scope="col">Total Amount</th>
+      <th scope="col">Delivery Details</th>
+      <th scope="col">Date of Order</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each orders}}
+    <tr>
+      <td scope="row" id="num-head"></td>
+      <td>{{this.username}}</td>
+      <td>{{this.itemName}}</td>
+      <td>{{this.quantity}}</td>
+      <td>{{this.status}}</td>
+      <td>{{this.paymentMethod}}</td>
+      <td>{{this.totalAmount}}</td>
+      <td>{{this.deliveryDetails.address}}
+          {{this.deliveryDetails.pincode}}
+          {{this.deliveryDetails.mobile}}
+      </td>
+      <td>{{date}}</td>
+      {{!-- <td><img style="width:50px;height:50px;" src="/product-images/{{this._id}}.jpg"></td>
+      <td><a href="/admin/edit-product/{{this._id}}" class="btn btn-info">Edit</a></td>
+      <td><a href="/admin/delete-product/{{this._id}}" class="btn btn-danger" onclick=" return confirm('Are you want to delete {{this.pname}}?')">Delete</a></td>  --}}
+    </tr>
+    {{/each}}
+    
+            </tbody>
+        </table>
+    </div>
+</section>
+

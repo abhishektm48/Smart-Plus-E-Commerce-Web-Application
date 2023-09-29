@@ -29,10 +29,11 @@
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
 
     <title>Smart Plus</title>
+    <link rel="icon" href="/public/images/SP.png" type="image/x-icon">
 </head>
 
 <body>
@@ -42,6 +43,7 @@
     {{>user-header}}
     {{/if}}
     {{{body}}}
+
     <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -54,7 +56,11 @@
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
+    {{#if admin}}
+    {{>admin-footer}}
+    {{else}}
     {{>user-footer}}
+    {{/if}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -70,7 +76,6 @@
         
         <script src="/javascripts/script.js"></script>
 
-        {{!-- Wow Js  --}}
 
         
 </body>

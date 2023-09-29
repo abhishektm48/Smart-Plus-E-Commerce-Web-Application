@@ -213,6 +213,7 @@ module.exports={
 
     getTotalAmount:(userId)=>
     {
+        console.log(`userId isssss:${userId}`);
         return new Promise(async(resolve,reject)=>
         {
             let total=await db.get().collection(collection.CART_DETAILS).aggregate([
@@ -274,7 +275,7 @@ module.exports={
                 products:products,
                 totalAmount:total,
                 status:status,
-                // admin_Id: objectId('65031d61222eb927287b4db7'),
+                admin_Id: objectId('65031d61222eb927287b4db7'),
                 date:new Date()
             }
 
