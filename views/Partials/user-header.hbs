@@ -21,6 +21,8 @@
 
                    {{#if user}}             
                   <li class="scroll-to-section"><a href="/orders">Orders</a></li>
+                  {{else}}
+                  <li class="scroll-to-section"><a href="#" onclick="showAlert()">Orders</a></li>
                   {{/if}}
                 </ul>        
                 <div class="dropdown">
@@ -50,7 +52,7 @@
       <script>
         function showAlert()
         {
-          alert('Please login to check the cart list...')
+          alert('Please login to access the menu...')
         }
       </script>
     

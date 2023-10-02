@@ -2,7 +2,6 @@ var express = require('express');
 const productHelpers = require('../helpers/product-helpers');
 var router = express.Router();
 var productHelper = require('../helpers/product-helpers');
-const { log } = require('debug/src/browser');
 
 const verifyAdminLogin = (req, res, next) => {
   if (req.session.admin.loggedIn) {
@@ -120,6 +119,13 @@ router.get('/all-orders', async (req, res) =>
   let orders = await productHelpers.getAllOrders(req.session.admin._id)
 
   res.render('admin/all-orders',{orders,admin:true})
+})
+
+router.get('/all-products', (req, res) =>
+{
+  productHelpers.getAllProduct().then((products) => {
+    res.render('admin/view-products', { admin:true, products })
+  })
 })
 
 module.exports = router;

@@ -78,25 +78,25 @@ if($('.menu-trigger').length){
 
     // banner 
 
-    // var slideImg = document.getElementById('slide-img');
+    var slideImg = document.getElementById('slide-img');
 
-    // var images = new Array(
-    //   "public/images/img1.jpg",
-    //   "public/images/img2.jpg",
-    //   "public/images/img3.jpg"
-    // );
+    var images = new Array(
+      "images/img2.jpg",
+      "images/img1.jpg",
+      "images/img3.jpg"
+    );
 
-    // var len = images.length;
-    // var i = 0;
+    var len = images.length;
+    var i = 0;
 
-    // function slider()
-    //   {
-    //     if( i> len-1)
-    //     {
-    //       i=0;
-    //     }
-    //     slideImg.src = images[i];
-    //     i++;
-    //     setTimeout('slider()',3000);
-    //   }
+    function slider()
+      {
+        if( i> len-1)
+        {
+          i=0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()',3000);
+      }
     
