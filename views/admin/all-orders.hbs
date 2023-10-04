@@ -1,9 +1,9 @@
 <section>
     <div class="container">
-        <table class="table mt-4">
+      <h2 class="text-center mt-4">All Orders</h2>
+        <table class="table table-styles">
   <thead>
     <tr>
-    <th scope="col">No</th>
       <th scope="col">User</th>
       <th scope="col">Product</th>
       <th scope="col">Quantity</th>
@@ -18,7 +18,6 @@
   <tbody>
     {{#each orders}}
     <tr>
-      <td scope="row" id="num-head"></td>
       <td>{{this.username}}</td>
       <td>{{this.itemName}}</td>
       <td>{{this.quantity}}</td>

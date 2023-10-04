@@ -1,7 +1,7 @@
 <section>
-    <div class="row">
+    <div class="col-md-12 admin-img">
         <div class="col-md-6 m-auto">
-            <div class="container mt-5 pl-5">
+            <div class="container mt-5 pl-5 admin-form-box">
                 <h2 class="text-center">Admin Login</h2>
                 <form action="admin/admin-login" method="post">
                     {{#if adminloginErr}}
@@ -9,17 +9,17 @@
                     {{/if}}
                     <div class="form-group pt-3">
                         <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" name="email" placeholder="Enter the Username">
+                        <input type="email" class="form-control" name="email" placeholder="Enter the Username" required>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                     </div>
                     <div>
                     </div>
-                    <button type="submit" class="btn btn-success mt-2">Login</button>
+                    <button type="submit" class="btn mt-2" style="background-color: #ea2845;color:#fff; border:none">Login</button>
                 </form>
             </div>
         </div>

@@ -81,8 +81,8 @@ if($('.menu-trigger').length){
     var slideImg = document.getElementById('slide-img');
 
     var images = new Array(
-      "images/img2.jpg",
       "images/img1.jpg",
+      "images/img2.jpg",
       "images/img3.jpg"
     );
 

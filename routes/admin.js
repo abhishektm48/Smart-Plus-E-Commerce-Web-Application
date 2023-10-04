@@ -57,7 +57,7 @@ router.get('/delete-product/:id', (req, res) => {
 router.get('/edit-product/:id', async (req, res) => {
   let products = await productHelpers.getProductDetails(req.params.id)
   console.log(products)
-  res.render('admin/edit-product', { products })
+  res.render('admin/edit-product', { products,admin:req.session.admin })
 })
 
 router.post('/edit-product/:id', (req, res) => {
@@ -109,7 +109,7 @@ router.get('/all-users',(req, res) =>
 {
   productHelpers.getAllUsers().then((userData) =>
   {
-    res.render('admin/all-users',{userData,admin:true})
+    res.render('admin/all-users',{userData,admin:req.session.admin})
   })
   
 })
@@ -118,7 +118,7 @@ router.get('/all-orders', async (req, res) =>
 {
   let orders = await productHelpers.getAllOrders(req.session.admin._id)
 
-  res.render('admin/all-orders',{orders,admin:true})
+  res.render('admin/all-orders',{orders,admin:req.session.admin})
 })
 
 router.get('/all-products', (req, res) =>
